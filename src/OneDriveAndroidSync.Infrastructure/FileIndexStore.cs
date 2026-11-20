@@ -3,7 +3,7 @@ using OneDriveAndroidSync.Domain;
 
 namespace OneDriveAndroidSync.Infrastructure;
 
-public sealed class FileIndexStore(string databasePath)
+public sealed class FileIndexStore(string databasePath) : OneDriveAndroidSync.Application.IFileFingerprintIndex
 {
     public async Task InitializeAsync(CancellationToken cancellationToken = default)
     {

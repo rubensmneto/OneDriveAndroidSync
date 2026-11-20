@@ -2,7 +2,7 @@
 
 ## Atualização
 
-2026-11-19 — Domínio corrigido e primeira fatia de scanner/índice implementada.
+2026-11-20 — Classificação por data e planejamento incremental adicionados.
 
 ## Concluído
 
@@ -17,6 +17,8 @@
 - Parser com cobertura de nomes ausentes e datas inválidas.
 - Scanner recursivo com fingerprints de caminho, tamanho e data de alteração UTC.
 - Índice SQLite inicial com criação de schema, upsert e consulta por caminho.
+- Classificação de arquivos em elegíveis, fora do intervalo, sem data e data inválida.
+- Planejador incremental que compara fingerprints e separa arquivos inalterados de novos/alterados.
 - Projetos de testes de aplicação e infraestrutura adicionados à solução.
 - Logger básico em arquivo.
 - Janela WPF inicial sem integração com dados reais.
@@ -28,7 +30,7 @@
 
 ## Próximos passos
 
-Implementar classificação de arquivos, scanner com tratamento observável de inacessíveis, contratos/fake de ADB e planejamento incremental antes da integração real.
+Implementar scanner com tratamento observável de inacessíveis, contratos/fake de ADB e inventário do destino antes da integração real.
 
 ## Riscos conhecidos
 
