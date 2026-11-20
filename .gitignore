@@ -1,0 +1,23 @@
+## .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+## Aplicação
+*.db
+*.db-shm
+*.db-wal
+logs/
+backups/
+appsettings.local.json
+
+## Dados do usuário e mídia
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.heif
+*.mp4
+*.mov
