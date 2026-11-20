@@ -19,6 +19,7 @@
 - Índice SQLite inicial com criação de schema, upsert e consulta por caminho.
 - Classificação de arquivos em elegíveis, fora do intervalo, sem data e data inválida.
 - Planejador incremental que compara fingerprints e separa arquivos inalterados de novos/alterados.
+- Contratos de ADB, serviço de seleção de dispositivo e listagem de destino com fake testável.
 - Projetos de testes de aplicação e infraestrutura adicionados à solução.
 - Logger básico em arquivo.
 - Janela WPF inicial sem integração com dados reais.
