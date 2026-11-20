@@ -1,11 +1,21 @@
 namespace OneDriveAndroidSync.Domain;
 
-public sealed record DateRange(DateOnly Start, DateOnly End)
+public sealed record DateRange
 {
-    public DateRange : this(Start, End)
+    public DateRange(DateOnly start, DateOnly end)
     {
-        if (End < Start) throw new ArgumentException("A data final deve ser maior ou igual à data inicial.");
+        if (end < start) throw new ArgumentException("A data final deve ser maior ou igual à data inicial.");
+
+        Start = start;
+        End = end;
     }
 
-    public bool Includes(DateTime value) => DateOnly.FromDateTime(value) is var date && date >= Start && date <= End;
+    public DateOnly Start { get; }
+    public DateOnly End { get; }
+
+    public bool Includes(DateTime value)
+    {
+        var date = DateOnly.FromDateTime(value);
+        return date >= Start && date <= End;
+    }
 }

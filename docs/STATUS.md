@@ -2,7 +2,7 @@
 
 ## Atualização
 
-2026-11-19 — Solução inicial criada conforme a arquitetura documentada.
+2026-11-19 — Domínio corrigido e primeira fatia de scanner/índice implementada.
 
 ## Concluído
 
@@ -13,18 +13,22 @@
 - `.gitignore` para artefatos .NET, banco, logs, backups e mídia do usuário.
 - README inicial.
 - Parser inicial do padrão `yyyyMMdd_HHmmss`.
-- `DateRange` com intervalo inclusivo.
-- Esqueleto de persistência SQLite.
+- `DateRange` com intervalo inclusivo e validação do intervalo.
+- Parser com cobertura de nomes ausentes e datas inválidas.
+- Scanner recursivo com fingerprints de caminho, tamanho e data de alteração UTC.
+- Índice SQLite inicial com criação de schema, upsert e consulta por caminho.
+- Projetos de testes de aplicação e infraestrutura adicionados à solução.
 - Logger básico em arquivo.
 - Janela WPF inicial sem integração com dados reais.
 
-## Não validado
+## Validado
 
-O SDK .NET não está disponível neste ambiente, portanto `dotnet restore`, `dotnet build` e `dotnet test` ainda não puderam ser executados.
+- SDK .NET 10.0.404 disponível no ambiente.
+- Restore, build e testes executados após a correção do domínio.
 
 ## Próximos passos
 
-Implementar testes adicionais do parser, scanner recursivo, índice de arquivos e contratos/fake de ADB antes da integração real.
+Implementar classificação de arquivos, scanner com tratamento observável de inacessíveis, contratos/fake de ADB e planejamento incremental antes da integração real.
 
 ## Riscos conhecidos
 
