@@ -21,6 +21,8 @@
 - Planejador incremental que compara fingerprints e separa arquivos inalterados de novos/alterados.
 - Contratos de ADB, serviço de seleção de dispositivo e listagem de destino com fake testável.
 - Serviço de transferência com validação de tamanho local/remoto, progresso e cancelamento.
+- Adaptador real de ADB encapsulado em processo com argumentos separados, timeout e cancelamento.
+- Abstração de disponibilidade do OneDrive local, com diagnóstico de arquivos somente online.
 - Histórico SQLite inicial para sessões e tentativas de transferência.
 - Projetos de testes de aplicação e infraestrutura adicionados à solução.
 - Logger básico em arquivo.
@@ -33,7 +35,7 @@
 
 ## Próximos passos
 
-Implementar adaptador real de ADB, materialização de arquivos somente online do OneDrive, backups antes de substituições e operações de metadados.
+Implementar materialização automática opcional via APIs do Windows, backups antes de substituições, operações de metadados e integração com a interface WPF.
 
 ## Riscos conhecidos
 
