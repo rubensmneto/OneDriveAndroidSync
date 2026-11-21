@@ -20,6 +20,8 @@
 - Classificação de arquivos em elegíveis, fora do intervalo, sem data e data inválida.
 - Planejador incremental que compara fingerprints e separa arquivos inalterados de novos/alterados.
 - Contratos de ADB, serviço de seleção de dispositivo e listagem de destino com fake testável.
+- Serviço de transferência com validação de tamanho local/remoto, progresso e cancelamento.
+- Histórico SQLite inicial para sessões e tentativas de transferência.
 - Projetos de testes de aplicação e infraestrutura adicionados à solução.
 - Logger básico em arquivo.
 - Janela WPF inicial sem integração com dados reais.
@@ -31,7 +33,7 @@
 
 ## Próximos passos
 
-Implementar scanner com tratamento observável de inacessíveis, contratos/fake de ADB e inventário do destino antes da integração real.
+Implementar adaptador real de ADB, materialização de arquivos somente online do OneDrive, backups antes de substituições e operações de metadados.
 
 ## Riscos conhecidos
 
